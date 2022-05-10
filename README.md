@@ -53,8 +53,8 @@ integration with components such as REST tasks and Data Mapper tasks.
 > **Integrations** as shown\
 > ![Graphical user interface, text, application, chat or text message
 > Description automatically
-> generated](./media/image1.png){width="1.3817235345581802in"
-> height="2.1566568241469817in"}\
+> generated](./media/image1.png | width="1.3817235345581802in"
+> height="2.1566568241469817in")\
 > \
 > **Step 3 :** Click on the button **CREATE NEW** to create a new
 > integration and input the following:\
