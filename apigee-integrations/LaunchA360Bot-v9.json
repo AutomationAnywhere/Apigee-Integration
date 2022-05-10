@@ -1,0 +1,379 @@
+{
+  "name": "projects/524993576198/locations/us/products/apigee/integrations/LaunchA360Bot/versions/2fb4eb00-0738-41e3-9375-e5dbf0afb2ca",
+  "description": "Launch a bot on Automation Anywhere 360 platform. ",
+  "updateTime": "2022-05-05T17:47:14.440Z",
+  "createTime": "2022-05-05T15:54:51.273Z",
+  "lastModifierEmail": "vineet.pujari@automationanywhere.com",
+  "triggerConfigs": [{
+    "label": "Launch Bot",
+    "startTasks": [{
+      "taskId": "4"
+    }],
+    "properties": {
+      "Trigger name": "launchbot"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/launchbot"
+  }],
+  "taskConfigs": [{
+    "task": "FieldMappingTask",
+    "taskId": "4",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$input-ControlRoomUrl$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027CONCAT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027/v1/authentication\u0027\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$authAPIUrl$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$input-ControlRoomUrl$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027CONCAT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027/v3/automations/deploy\u0027\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$deployBotAPIUrl$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027literalValue\u0027: {\n            \u0027stringValue\u0027: \u0027{\\n  \\\u0027username\\\u0027: \\\u0027$input-Username$\\\u0027,\\n  \\\u0027apiKey\\\u0027: \\\u0027$input-ApiKey$\\\u0027\\n}\u0027\n          }\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027RESOLVE_TEMPLATE\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$authRequestBody$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027literalValue\u0027: {\n            \u0027stringValue\u0027: \u0027{\\n\\t\\\u0027fileId\\\u0027: \\\u0027$input-BotId$\\\u0027,\\n\\t\\\u0027runAsUserIds\\\u0027: [$input-RunAsUserId$],\\n\\t\\\u0027poolIds\\\u0027: [$input-PoolId$],\\n\\t\\\u0027botInput\\\u0027: {$input-BotInputVariables$}\\n}\u0027\n          }\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027RESOLVE_TEMPLATE\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$deployRequestBody$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "1"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Prepare API Urls and Payloads"
+  }, {
+    "task": "GenericRestV2Task",
+    "taskId": "1",
+    "parameters": {
+      "throwError": {
+        "key": "throwError",
+        "value": {
+          "booleanValue": true
+        }
+      },
+      "responseBody": {
+        "key": "responseBody",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_responseBody`$"]
+          }
+        }
+      },
+      "httpParams": {
+        "key": "httpParams"
+      },
+      "responseHeader": {
+        "key": "responseHeader",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_responseHeader`$"]
+          }
+        }
+      },
+      "userAgent": {
+        "key": "userAgent",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "httpMethod": {
+        "key": "httpMethod",
+        "value": {
+          "stringValue": "POST"
+        }
+      },
+      "responseStatus": {
+        "key": "responseStatus",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_responseStatus`$"]
+          }
+        }
+      },
+      "url": {
+        "key": "url",
+        "value": {
+          "stringValue": "$authAPIUrl$"
+        }
+      },
+      "urlFetchingService": {
+        "key": "urlFetchingService",
+        "value": {
+          "stringValue": "HARPOON"
+        }
+      },
+      "requestorId": {
+        "key": "requestorId",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "urlQueryStrings": {
+        "key": "urlQueryStrings"
+      },
+      "requestBody": {
+        "key": "requestBody",
+        "value": {
+          "stringValue": "$authRequestBody$"
+        }
+      },
+      "followRedirects": {
+        "key": "followRedirects",
+        "value": {
+          "booleanValue": true
+        }
+      },
+      "additionalHeaders": {
+        "key": "additionalHeaders"
+      }
+    },
+    "nextTasks": [{
+      "taskId": "2"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "A360 Authentication",
+    "description": "Authenticate with A360 using username and api key.  Update the authRequestBody variable with the correct credential"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "2",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_1_responseBody`$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_JSON\u0027\n            }\n          }\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027token\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$accessToken$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "3"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Extract Token",
+    "description": "Extract Access Token"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "5",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_3_responseBody`$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_JSON\u0027\n            }\n          }\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027deploymentId\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$output-deploymentId$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Extract DeploymentId",
+    "description": "Extract Access Token"
+  }, {
+    "task": "GenericRestV2Task",
+    "taskId": "3",
+    "parameters": {
+      "throwError": {
+        "key": "throwError",
+        "value": {
+          "booleanValue": true
+        }
+      },
+      "responseBody": {
+        "key": "responseBody",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_3_responseBody`$"]
+          }
+        }
+      },
+      "httpParams": {
+        "key": "httpParams",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027content-type\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027application/json\u0027\n      }\n    }\n  }]\n}"
+        }
+      },
+      "responseHeader": {
+        "key": "responseHeader",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_3_responseHeader`$"]
+          }
+        }
+      },
+      "userAgent": {
+        "key": "userAgent",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "httpMethod": {
+        "key": "httpMethod",
+        "value": {
+          "stringValue": "POST"
+        }
+      },
+      "responseStatus": {
+        "key": "responseStatus",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_3_responseStatus`$"]
+          }
+        }
+      },
+      "url": {
+        "key": "url",
+        "value": {
+          "stringValue": "$deployBotAPIUrl$"
+        }
+      },
+      "urlFetchingService": {
+        "key": "urlFetchingService",
+        "value": {
+          "stringValue": "HARPOON"
+        }
+      },
+      "requestorId": {
+        "key": "requestorId",
+        "value": {
+          "stringValue": ""
+        }
+      },
+      "urlQueryStrings": {
+        "key": "urlQueryStrings"
+      },
+      "requestBody": {
+        "key": "requestBody",
+        "value": {
+          "stringValue": "$deployRequestBody$"
+        }
+      },
+      "followRedirects": {
+        "key": "followRedirects",
+        "value": {
+          "booleanValue": true
+        }
+      },
+      "additionalHeaders": {
+        "key": "additionalHeaders",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027X-Authorization\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027referenceKey\u0027: \u0027$accessToken$\u0027\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "5"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Deploy Bot"
+  }],
+  "integrationParameters": [{
+    "key": "`Task_1_responseHeader`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_1_responseHeader`",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "`Task_1_responseBody`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_1_responseBody`",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "`Task_1_responseStatus`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_1_responseStatus`",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "accessToken",
+    "dataType": "STRING_VALUE",
+    "displayName": "accessToken"
+  }, {
+    "key": "`Task_3_responseHeader`",
+    "dataType": "STRING_VALUE",
+    "displayName": "`Task_3_responseHeader`",
+    "isTransient": true,
+    "producer": "1_3"
+  }, {
+    "key": "authAPIUrl",
+    "dataType": "STRING_VALUE",
+    "displayName": "authAPIUrl"
+  }, {
+    "key": "deployBotAPIUrl",
+    "dataType": "STRING_VALUE",
+    "displayName": "deployBotAPIUrl"
+  }, {
+    "key": "authRequestBody",
+    "dataType": "STRING_VALUE",
+    "displayName": "authRequestBody"
+  }, {
+    "key": "deployRequestBody",
+    "dataType": "STRING_VALUE",
+    "displayName": "deployRequestBody"
+  }, {
+    "key": "input-ControlRoomUrl",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-ControlRoomUrl",
+    "inputOutputType": "IN"
+  }, {
+    "key": "input-Username",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-Username",
+    "inputOutputType": "IN"
+  }, {
+    "key": "input-ApiKey",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-ApiKey",
+    "inputOutputType": "IN"
+  }, {
+    "key": "input-BotId",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-BotId",
+    "inputOutputType": "IN"
+  }, {
+    "key": "input-RunAsUserId",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-RunAsUserId",
+    "inputOutputType": "IN"
+  }, {
+    "key": "input-BotInputVariables",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-BotInputVariables",
+    "inputOutputType": "IN"
+  }, {
+    "key": "output-deploymentId",
+    "dataType": "STRING_VALUE",
+    "displayName": "output-deploymentId",
+    "inputOutputType": "OUT"
+  }, {
+    "key": "`Task_3_responseBody`",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "`Task_3_responseBody`",
+    "isTransient": true,
+    "producer": "1_3"
+  }, {
+    "key": "`Task_3_responseStatus`",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "`Task_3_responseStatus`",
+    "isTransient": true,
+    "producer": "1_3"
+  }, {
+    "key": "input-PoolId",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": ""
+    },
+    "displayName": "input-PoolId"
+  }]
+}

@@ -1,0 +1,138 @@
+{
+  "name": "projects/524993576198/locations/us/products/apigee/integrations/HelloWorld/versions/b2385efe-6568-400e-b6b7-32f0e783a190",
+  "description": "This is hello world bot",
+  "updateTime": "2022-04-29T16:16:53.297Z",
+  "lockHolder": "author@automationanywhere.com",
+  "createTime": "2022-04-29T16:16:53.297Z",
+  "lastModifierEmail": "author@automationanywhere.com",
+  "triggerConfigs": [{
+    "label": "API Trigger",
+    "startTasks": [{
+      "taskId": "1"
+    }],
+    "properties": {
+      "Trigger name": "HelloWorld"
+    },
+    "triggerType": "API",
+    "triggerNumber": "1",
+    "triggerId": "api_trigger/HelloWorld"
+  }],
+  "taskConfigs": [{
+    "task": "SubWorkflowExecutorV2Task",
+    "taskId": "1",
+    "parameters": {
+      "disableEUCPropagation": {
+        "key": "disableEUCPropagation",
+        "value": {
+          "booleanValue": false
+        }
+      },
+      "executionIds": {
+        "key": "executionIds",
+        "value": {
+          "stringArray": {
+            "stringValues": ["$`Task_1_executionIds`$"]
+          }
+        }
+      },
+      "timeInMsToSchedule": {
+        "key": "timeInMsToSchedule",
+        "value": {
+          "intValue": "0"
+        }
+      },
+      "triggerId": {
+        "key": "triggerId",
+        "value": {
+          "stringValue": "api_trigger/launchbot"
+        }
+      },
+      "executionStrategy": {
+        "key": "executionStrategy",
+        "value": {
+          "stringValue": "SYNC"
+        }
+      },
+      "requestParamsMap": {
+        "key": "requestParamsMap",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027controlRoomUrl\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-ControlRoomUrl\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027username\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-Username\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027apikey\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-ApiKey\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027botId\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-BotId\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027runAsUserId\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-RunAsUserId\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027botInputs\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-BotInputVariables\u0027\n      }\n    }\n  }, {\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027poolId\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027input-PoolId\u0027\n      }\n    }\n  }]\n}"
+        }
+      },
+      "workflowName": {
+        "key": "workflowName",
+        "value": {
+          "stringValue": "LaunchA360Bot"
+        }
+      },
+      "responseParamsMap": {
+        "key": "responseParamsMap",
+        "value": {
+          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027output-deploymentId\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027deploymentId\u0027\n      }\n    }\n  }]\n}"
+        }
+      }
+    },
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Launch RPA Bot"
+  }],
+  "integrationParameters": [{
+    "key": "`Task_1_executionIds`",
+    "dataType": "STRING_ARRAY",
+    "displayName": "`Task_1_executionIds`",
+    "isTransient": true,
+    "producer": "1_1"
+  }, {
+    "key": "controlRoomUrl",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Enter your control room url"
+    },
+    "displayName": "controlRoomUrl"
+  }, {
+    "key": "username",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Enter your control room account username"
+    },
+    "displayName": "username"
+  }, {
+    "key": "apikey",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Enter your control room account api key"
+    },
+    "displayName": "apikey"
+  }, {
+    "key": "botId",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Enter your bot id"
+    },
+    "displayName": "botId"
+  }, {
+    "key": "runAsUserId",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "Enter your run as user id"
+    },
+    "displayName": "runAsUserId"
+  }, {
+    "key": "poolId",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": " "
+    },
+    "displayName": "poolId"
+  }, {
+    "key": "botInputs",
+    "dataType": "STRING_VALUE",
+    "defaultValue": {
+      "stringValue": "\"name\": {\"type\": \"STRING\",\"string\": \"World\"},\"timer_in_sec\": {\"type\": \"NUMBER\",\"number\": \"10\"}"
+    },
+    "displayName": "botInputs"
+  }, {
+    "key": "deploymentId",
+    "dataType": "STRING_VALUE",
+    "displayName": "deploymentId"
+  }]
+}
