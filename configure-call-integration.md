@@ -1,4 +1,4 @@
-# Configuring the Call Integration task {#tpc-configure-call-integration .task}
+# Configuring the Call Integration task
 
 The **Call Integration** task lets you run other integrations \(sub-integrations\) from your main integration. It is built to launch the main integration by passing all the parameters.
 

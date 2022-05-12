@@ -1,4 +1,4 @@
-# Automation Anywhere and Apigee Integration {#A360-Apigee-Integration .concept}
+# Automation Anywhere and Apigee Integration
 
 Automation Anywhere allows you to integrate Apigee with Control Room API platform. You will be able to authenticate to get access to a Control room and deploy bots using various Control Room APIs.
 

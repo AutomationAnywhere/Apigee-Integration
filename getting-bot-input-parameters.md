@@ -1,4 +1,4 @@
-# Getting Bot Input Parameters {#tpc-getting-bot-input-parameters .task}
+# Getting Bot Input Parameters
 
 This section provides you with the details on how to get the input parameters for Automation Anywhere bot that are mandatory to launch the Integration \([Apigee integration](configure-call-integration.md)\).
 

@@ -1,4 +1,4 @@
-# Building the Integration {#tpc-building-integration .task}
+# Building the Integration
 
 This section provides a step by step process to build the integration. Make sure that the bot you are trying to deploy is already available in the Control room.
 
