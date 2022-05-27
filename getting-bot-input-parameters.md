@@ -14,5 +14,5 @@ To identify the parameter values, ensure that you have access to your Automation
     -   **Bot Inputs Variable**: Provide all the input variables that the bot requires for the deployment.
     -   **Device Pool ID**: Devices on which your bot will be deployed and run. Navigate to **Manage** \> **Device Pools** \> **Select a Device Pool** and note down the device pool ID.
 
-**Parent topic:**[Automation Anywhere and Apigee Integration](../)
+**Parent topic:**[Automation Anywhere and Apigee Integration](../../)
 

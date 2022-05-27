@@ -41,5 +41,5 @@ Perform the following steps to use JSONs to create the integration.
     Apigee creates a new version of the integration by using the uploaded file. You can view the integration with all the setup information as described in [Creating a subintegration \(LaunchA360Bot.json\)](creating-sub-integration.md).
 
 
-**Parent topic:**[Automation Anywhere and Apigee Integration](../readme.md)
+**Parent topic:**[Automation Anywhere and Apigee Integration](../../)
 

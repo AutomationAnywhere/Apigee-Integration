@@ -81,5 +81,5 @@ Perform the following steps to build a subintegration:
     ![](images/step14.png)
 
 
-**Parent topic:**[Automation Anywhere and Apigee Integration](../readme.md)
+**Parent topic:**[Automation Anywhere and Apigee Integration](../../)
 
