@@ -22,6 +22,3 @@ Get the input parameters from an Automation 360 bot that are required for launch
 The main integration task calls the subintegration by using the trigger ID.
 -   **[Creating a subintegration \(LaunchA360Bot.json\)](../main/creating-sub-integration.md)**  
 As you build a subintegration, ensure that the bot that you are trying to deploy is already available in the Control Room.
-
-**Parent topic:**[Integrations](../../enterprise/topics/aae-client/bot-creator/customizing-an-automation-client/integrations.md)
-
