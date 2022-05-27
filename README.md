@@ -14,13 +14,13 @@ The prebuilt integrations simplify access to Automation 360 bots by abstracting 
 
 **Note:** By dividing the integration, you can reuse the second integration by calling it with a different set of input parameters.
 
--   **[Prebuilt integrations](../readme/integration-json-files.md)**  
+-   **[Prebuilt integrations](../main/integration-json-files.md)**  
 The Automation 360 and Apigee integration has two prebuilt Apigee integrations in the form of JSON file models, the `TriggerA360Bot.json` file and the `LaunchA360Bot.json` file. Download these two integration files, upload them as new integrations in your Apigee instance, and start calling Automation 360 bots. Download the `TriggerA360Bot.json` and `LaunchA360Bot.json` files from the following location: [https://github.com/AutomationAnywhere/Apigee-Integration/tree/main/apigee-integrations](https://github.com/AutomationAnywhere/Apigee-Integration/tree/main/apigee-integrations)
--   **[Getting bot input parameters](../readme/getting-bot-input-parameters.md)**  
+-   **[Getting bot input parameters](../main/getting-bot-input-parameters.md)**  
 Get the input parameters from an Automation 360 bot that are required for launching the integration \([Creating the main integration \(TriggerA360Bot.json\)](creating-main-integration.md)\).
--   **[Creating the main integration \(TriggerA360Bot.json\)](../readme/creating-main-integration.md)**  
+-   **[Creating the main integration \(TriggerA360Bot.json\)](../main/creating-main-integration.md)**  
 The main integration task calls the subintegration by using the trigger ID.
--   **[Creating a subintegration \(LaunchA360Bot.json\)](../readme/creating-sub-integration.md)**  
+-   **[Creating a subintegration \(LaunchA360Bot.json\)](../main/creating-sub-integration.md)**  
 As you build a subintegration, ensure that the bot that you are trying to deploy is already available in the Control Room.
 
 **Parent topic:**[Integrations](../../enterprise/topics/aae-client/bot-creator/customizing-an-automation-client/integrations.md)
