@@ -30,5 +30,5 @@ This task uses the trigger ID API as a handle to identify the integrations to ru
         This task is useful when you have a dependency on another integration and want to run it from your main integration. The task runs the subintegration either synchronously or asynchronously.
 
 
-**Parent topic:**[Automation Anywhere and Apigee Integration](../A360-Apigee-Integration/a360-apigee-integration.md)
+**Parent topic:**[Automation Anywhere and Apigee Integration](../README)
 

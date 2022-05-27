@@ -1,4 +1,4 @@
-# Creating a subintegration \(`LaunchA360Bot.json`\)
+# Creating a subintegration \(`LaunchA360Bot.json`\) {#tpc-building-integration .task}
 
 As you build a subintegration, ensure that the bot that you are trying to deploy is already available in the Control Room.
 
@@ -81,5 +81,5 @@ Perform the following steps to build a subintegration:
     ![](images/step14.png)
 
 
-**Parent topic:**[Automation Anywhere and Apigee Integration](../A360-Apigee-Integration/a360-apigee-integration.md)
+**Parent topic:**[Automation Anywhere and Apigee Integration](../README.md)
 
