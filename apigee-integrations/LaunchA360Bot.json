@@ -1,9 +1,9 @@
 {
-  "name": "projects/524993576198/locations/us/products/apigee/integrations/LaunchA360Bot/versions/2fb4eb00-0738-41e3-9375-e5dbf0afb2ca",
+  "name": "projects/524993576198/locations/us/products/apigee/integrations/LaunchA360Bot/versions/9347d095-60ff-4cf4-bde7-b522aa589059",
   "description": "Launch a bot on Automation Anywhere 360 platform. ",
-  "updateTime": "2022-05-05T17:47:14.440Z",
-  "createTime": "2022-05-05T15:54:51.273Z",
-  "lastModifierEmail": "vineet.pujari@automationanywhere.com",
+  "updateTime": "2022-09-01T20:07:35.815Z",
+  "createTime": "2022-09-01T20:06:36.887Z",
+  "lastModifierEmail": "kevin.chan@automationanywhere.com",
   "triggerConfigs": [{
     "label": "Launch Bot",
     "startTasks": [{
@@ -17,22 +17,6 @@
     "triggerId": "api_trigger/launchbot"
   }],
   "taskConfigs": [{
-    "task": "FieldMappingTask",
-    "taskId": "4",
-    "parameters": {
-      "FieldMappingConfigTaskParameterKey": {
-        "key": "FieldMappingConfigTaskParameterKey",
-        "value": {
-          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$input-ControlRoomUrl$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027CONCAT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027/v1/authentication\u0027\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$authAPIUrl$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$input-ControlRoomUrl$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027CONCAT\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027/v3/automations/deploy\u0027\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$deployBotAPIUrl$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027literalValue\u0027: {\n            \u0027stringValue\u0027: \u0027{\\n  \\\u0027username\\\u0027: \\\u0027$input-Username$\\\u0027,\\n  \\\u0027apiKey\\\u0027: \\\u0027$input-ApiKey$\\\u0027\\n}\u0027\n          }\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027RESOLVE_TEMPLATE\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$authRequestBody$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }, {\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027literalValue\u0027: {\n            \u0027stringValue\u0027: \u0027{\\n\\t\\\u0027fileId\\\u0027: \\\u0027$input-BotId$\\\u0027,\\n\\t\\\u0027runAsUserIds\\\u0027: [$input-RunAsUserId$],\\n\\t\\\u0027poolIds\\\u0027: [$input-PoolId$],\\n\\t\\\u0027botInput\\\u0027: {$input-BotInputVariables$}\\n}\u0027\n          }\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027RESOLVE_TEMPLATE\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$deployRequestBody$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
-        }
-      }
-    },
-    "nextTasks": [{
-      "taskId": "1"
-    }],
-    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
-    "displayName": "Prepare API Urls and Payloads"
-  }, {
     "task": "GenericRestV2Task",
     "taskId": "1",
     "parameters": {
@@ -131,7 +115,7 @@
       "FieldMappingConfigTaskParameterKey": {
         "key": "FieldMappingConfigTaskParameterKey",
         "value": {
-          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_1_responseBody`$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_JSON\u0027\n            }\n          }\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027token\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$accessToken$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+          "jsonValue": "{\n  \u0022@type\u0022: \u0022type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0022,\n  \u0022mappedFields\u0022: [{\n    \u0022inputField\u0022: {\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022transformExpression\u0022: {\n        \u0022initialValue\u0022: {\n          \u0022referenceValue\u0022: \u0022$`Task_1_responseBody`$\u0022\n        },\n        \u0022transformationFunctions\u0022: [{\n          \u0022functionType\u0022: {\n            \u0022stringFunction\u0022: {\n              \u0022functionName\u0022: \u0022TO_JSON\u0022\n            }\n          }\n        }, {\n          \u0022functionType\u0022: {\n            \u0022jsonFunction\u0022: {\n              \u0022functionName\u0022: \u0022GET_PROPERTY\u0022\n            }\n          },\n          \u0022parameters\u0022: [{\n            \u0022initialValue\u0022: {\n              \u0022literalValue\u0022: {\n                \u0022stringValue\u0022: \u0022token\u0022\n              }\n            }\n          }]\n        }, {\n          \u0022functionType\u0022: {\n            \u0022jsonFunction\u0022: {\n              \u0022functionName\u0022: \u0022TO_STRING\u0022\n            }\n          }\n        }]\n      }\n    },\n    \u0022outputField\u0022: {\n      \u0022referenceKey\u0022: \u0022$accessToken$\u0022,\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022cardinality\u0022: \u0022OPTIONAL\u0022\n    }\n  }]\n}"
         }
       }
     },
@@ -148,7 +132,7 @@
       "FieldMappingConfigTaskParameterKey": {
         "key": "FieldMappingConfigTaskParameterKey",
         "value": {
-          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0027,\n  \u0027mappedFields\u0027: [{\n    \u0027inputField\u0027: {\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027transformExpression\u0027: {\n        \u0027initialValue\u0027: {\n          \u0027referenceValue\u0027: \u0027$`Task_3_responseBody`$\u0027\n        },\n        \u0027transformationFunctions\u0027: [{\n          \u0027functionType\u0027: {\n            \u0027stringFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_JSON\u0027\n            }\n          }\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027GET_PROPERTY\u0027\n            }\n          },\n          \u0027parameters\u0027: [{\n            \u0027initialValue\u0027: {\n              \u0027literalValue\u0027: {\n                \u0027stringValue\u0027: \u0027deploymentId\u0027\n              }\n            }\n          }]\n        }, {\n          \u0027functionType\u0027: {\n            \u0027jsonFunction\u0027: {\n              \u0027functionName\u0027: \u0027TO_STRING\u0027\n            }\n          }\n        }]\n      }\n    },\n    \u0027outputField\u0027: {\n      \u0027referenceKey\u0027: \u0027$output-deploymentId$\u0027,\n      \u0027fieldType\u0027: \u0027STRING_VALUE\u0027,\n      \u0027cardinality\u0027: \u0027OPTIONAL\u0027\n    }\n  }]\n}"
+          "jsonValue": "{\n  \u0022@type\u0022: \u0022type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0022,\n  \u0022mappedFields\u0022: [{\n    \u0022inputField\u0022: {\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022transformExpression\u0022: {\n        \u0022initialValue\u0022: {\n          \u0022referenceValue\u0022: \u0022$`Task_3_responseBody`$\u0022\n        },\n        \u0022transformationFunctions\u0022: [{\n          \u0022functionType\u0022: {\n            \u0022stringFunction\u0022: {\n              \u0022functionName\u0022: \u0022TO_JSON\u0022\n            }\n          }\n        }, {\n          \u0022functionType\u0022: {\n            \u0022jsonFunction\u0022: {\n              \u0022functionName\u0022: \u0022GET_PROPERTY\u0022\n            }\n          },\n          \u0022parameters\u0022: [{\n            \u0022initialValue\u0022: {\n              \u0022literalValue\u0022: {\n                \u0022stringValue\u0022: \u0022deploymentId\u0022\n              }\n            }\n          }]\n        }, {\n          \u0022functionType\u0022: {\n            \u0022jsonFunction\u0022: {\n              \u0022functionName\u0022: \u0022TO_STRING\u0022\n            }\n          }\n        }]\n      }\n    },\n    \u0022outputField\u0022: {\n      \u0022referenceKey\u0022: \u0022$output-deploymentId$\u0022,\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022cardinality\u0022: \u0022OPTIONAL\u0022\n    }\n  }]\n}"
         }
       }
     },
@@ -176,7 +160,7 @@
       "httpParams": {
         "key": "httpParams",
         "value": {
-          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027content-type\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027application/json\u0027\n      }\n    }\n  }]\n}"
+          "jsonValue": "{\n  \u0022@type\u0022: \u0022type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0022,\n  \u0022entries\u0022: [{\n    \u0022key\u0022: {\n      \u0022literalValue\u0022: {\n        \u0022stringValue\u0022: \u0022content-type\u0022\n      }\n    },\n    \u0022value\u0022: {\n      \u0022literalValue\u0022: {\n        \u0022stringValue\u0022: \u0022application/json\u0022\n      }\n    }\n  }]\n}"
         }
       },
       "responseHeader": {
@@ -243,7 +227,7 @@
       "additionalHeaders": {
         "key": "additionalHeaders",
         "value": {
-          "jsonValue": "{\n  \u0027@type\u0027: \u0027type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0027,\n  \u0027entries\u0027: [{\n    \u0027key\u0027: {\n      \u0027literalValue\u0027: {\n        \u0027stringValue\u0027: \u0027X-Authorization\u0027\n      }\n    },\n    \u0027value\u0027: {\n      \u0027referenceKey\u0027: \u0027$accessToken$\u0027\n    }\n  }]\n}"
+          "jsonValue": "{\n  \u0022@type\u0022: \u0022type.googleapis.com/enterprise.crm.eventbus.proto.ParameterMap\u0022,\n  \u0022entries\u0022: [{\n    \u0022key\u0022: {\n      \u0022literalValue\u0022: {\n        \u0022stringValue\u0022: \u0022X-Authorization\u0022\n      }\n    },\n    \u0022value\u0022: {\n      \u0022referenceKey\u0022: \u0022$accessToken$\u0022\n    }\n  }]\n}"
         }
       }
     },
@@ -252,6 +236,22 @@
     }],
     "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
     "displayName": "Deploy Bot"
+  }, {
+    "task": "FieldMappingTask",
+    "taskId": "4",
+    "parameters": {
+      "FieldMappingConfigTaskParameterKey": {
+        "key": "FieldMappingConfigTaskParameterKey",
+        "value": {
+          "jsonValue": "{\n  \u0022@type\u0022: \u0022type.googleapis.com/enterprise.crm.eventbus.proto.FieldMappingConfig\u0022,\n  \u0022mappedFields\u0022: [{\n    \u0022inputField\u0022: {\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022transformExpression\u0022: {\n        \u0022initialValue\u0022: {\n          \u0022referenceValue\u0022: \u0022$input-ControlRoomUrl$\u0022\n        },\n        \u0022transformationFunctions\u0022: [{\n          \u0022functionType\u0022: {\n            \u0022stringFunction\u0022: {\n              \u0022functionName\u0022: \u0022CONCAT\u0022\n            }\n          },\n          \u0022parameters\u0022: [{\n            \u0022initialValue\u0022: {\n              \u0022literalValue\u0022: {\n                \u0022stringValue\u0022: \u0022/v1/authentication\u0022\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0022outputField\u0022: {\n      \u0022referenceKey\u0022: \u0022$authAPIUrl$\u0022,\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022cardinality\u0022: \u0022OPTIONAL\u0022\n    }\n  }, {\n    \u0022inputField\u0022: {\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022transformExpression\u0022: {\n        \u0022initialValue\u0022: {\n          \u0022referenceValue\u0022: \u0022$input-ControlRoomUrl$\u0022\n        },\n        \u0022transformationFunctions\u0022: [{\n          \u0022functionType\u0022: {\n            \u0022stringFunction\u0022: {\n              \u0022functionName\u0022: \u0022CONCAT\u0022\n            }\n          },\n          \u0022parameters\u0022: [{\n            \u0022initialValue\u0022: {\n              \u0022literalValue\u0022: {\n                \u0022stringValue\u0022: \u0022/v3/automations/deploy\u0022\n              }\n            }\n          }]\n        }]\n      }\n    },\n    \u0022outputField\u0022: {\n      \u0022referenceKey\u0022: \u0022$deployBotAPIUrl$\u0022,\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022cardinality\u0022: \u0022OPTIONAL\u0022\n    }\n  }, {\n    \u0022inputField\u0022: {\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022transformExpression\u0022: {\n        \u0022initialValue\u0022: {\n          \u0022literalValue\u0022: {\n            \u0022stringValue\u0022: \u0022{\\n  \\\u0022username\\\u0022: \\\u0022$input-Username$\\\u0022,\\n  \\\u0022apiKey\\\u0022: \\\u0022$input-ApiKey$\\\u0022\\n}\u0022\n          }\n        },\n        \u0022transformationFunctions\u0022: [{\n          \u0022functionType\u0022: {\n            \u0022stringFunction\u0022: {\n              \u0022functionName\u0022: \u0022RESOLVE_TEMPLATE\u0022\n            }\n          }\n        }]\n      }\n    },\n    \u0022outputField\u0022: {\n      \u0022referenceKey\u0022: \u0022$authRequestBody$\u0022,\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022cardinality\u0022: \u0022OPTIONAL\u0022\n    }\n  }, {\n    \u0022inputField\u0022: {\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022transformExpression\u0022: {\n        \u0022initialValue\u0022: {\n          \u0022literalValue\u0022: {\n            \u0022stringValue\u0022: \u0022{\\n\\t\\\u0022fileId\\\u0022: \\\u0022$input-BotId$\\\u0022,\\n\\t\\\u0022runAsUserIds\\\u0022: [$input-RunAsUserId$],\\n\\t\\\u0022poolIds\\\u0022: [$input-PoolId$],\\n\\t\\\u0022botInput\\\u0022: $input-BotInputVariables$\\n}\u0022\n          }\n        },\n        \u0022transformationFunctions\u0022: [{\n          \u0022functionType\u0022: {\n            \u0022stringFunction\u0022: {\n              \u0022functionName\u0022: \u0022RESOLVE_TEMPLATE\u0022\n            }\n          }\n        }]\n      }\n    },\n    \u0022outputField\u0022: {\n      \u0022referenceKey\u0022: \u0022$deployRequestBody$\u0022,\n      \u0022fieldType\u0022: \u0022STRING_VALUE\u0022,\n      \u0022cardinality\u0022: \u0022OPTIONAL\u0022\n    }\n  }]\n}"
+        }
+      }
+    },
+    "nextTasks": [{
+      "taskId": "1"
+    }],
+    "taskExecutionStrategy": "WHEN_ALL_SUCCEED",
+    "displayName": "Prepare API Urls and Payloads"
   }],
   "integrationParameters": [{
     "key": "`Task_1_responseHeader`",
