@@ -1,8 +1,8 @@
 {
-  "name": "projects/524993576198/locations/us/products/apigee/integrations/LaunchA360Bot/versions/9347d095-60ff-4cf4-bde7-b522aa589059",
+  "name": "projects/524993576198/locations/us/products/apigee/integrations/LaunchA360Bot/versions/0ab0b4f4-b04f-43fa-b458-8ef2c1ad03de",
   "description": "Launch a bot on Automation Anywhere 360 platform. ",
-  "updateTime": "2022-09-01T20:07:35.815Z",
-  "createTime": "2022-09-01T20:06:36.887Z",
+  "updateTime": "2022-09-06T18:24:01.259Z",
+  "createTime": "2022-09-06T18:23:18.292Z",
   "lastModifierEmail": "kevin.chan@automationanywhere.com",
   "triggerConfigs": [{
     "label": "Launch Bot",
@@ -371,9 +371,7 @@
   }, {
     "key": "input-PoolId",
     "dataType": "STRING_VALUE",
-    "defaultValue": {
-      "stringValue": ""
-    },
-    "displayName": "input-PoolId"
+    "displayName": "input-PoolId",
+    "inputOutputType": "IN"
   }]
 }

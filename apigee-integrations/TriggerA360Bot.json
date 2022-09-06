@@ -1,21 +1,20 @@
 {
-  "name": "projects/524993576198/locations/us/products/apigee/integrations/HelloWorld/versions/b2385efe-6568-400e-b6b7-32f0e783a190",
-  "description": "This is hello world bot",
-  "updateTime": "2022-04-29T16:16:53.297Z",
-  "lockHolder": "author@automationanywhere.com",
-  "createTime": "2022-04-29T16:16:53.297Z",
-  "lastModifierEmail": "author@automationanywhere.com",
+  "name": "projects/524993576198/locations/us/products/apigee/integrations/TriggerA360Bot/versions/e78b8afd-754b-484a-94c9-d1654f7b4b35",
+  "description": "This is an integration to launch your A360 bot.  Click on the variable to configure your bot launch.",
+  "updateTime": "2022-09-06T18:28:22.021Z",
+  "createTime": "2022-09-06T18:27:52.443Z",
+  "lastModifierEmail": "kevin.chan@automationanywhere.com",
   "triggerConfigs": [{
     "label": "API Trigger",
     "startTasks": [{
       "taskId": "1"
     }],
     "properties": {
-      "Trigger name": "HelloWorld"
+      "Trigger name": "TriggerA360Bot"
     },
     "triggerType": "API",
     "triggerNumber": "1",
-    "triggerId": "api_trigger/HelloWorld"
+    "triggerId": "api_trigger/TriggerA360Bot"
   }],
   "taskConfigs": [{
     "task": "SubWorkflowExecutorV2Task",
@@ -127,7 +126,7 @@
     "key": "botInputs",
     "dataType": "STRING_VALUE",
     "defaultValue": {
-      "stringValue": "\"name\": {\"type\": \"STRING\",\"string\": \"World\"},\"timer_in_sec\": {\"type\": \"NUMBER\",\"number\": \"10\"}"
+      "stringValue": "{}"
     },
     "displayName": "botInputs"
   }, {
